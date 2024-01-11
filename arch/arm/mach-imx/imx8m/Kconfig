@@ -337,6 +337,13 @@ config TARGET_IMX8MP_DDR4_EVK
 	select ARCH_MISC_INIT
 	select SPL_CRYPTO if SPL
 
+config TARGET_IMX8MP_DEBIX_MODEL_B
+	bool "Polyhex i.MX8M Plus Debix Model B SBC"
+	#select BINMAN
+	select IMX8MP
+	select IMX8M_LPDDR4
+	select SUPPORT_SPL
+
 config TARGET_PICO_IMX8MQ
 	bool "Support Technexion Pico iMX8MQ"
 	select BINMAN
@@ -481,5 +488,6 @@ source "board/technexion/pico-imx8mq/Kconfig"
 source "board/variscite/imx8mn_var_som/Kconfig"
 source "board/toradex/verdin-imx8mm/Kconfig"
 source "board/toradex/verdin-imx8mp/Kconfig"
+source "board/polyhex/imx8mp_debix_model_b/Kconfig"
 
 endif
